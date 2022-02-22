@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Queue<Block> nextBlocks = new Queue<Block>();
     public List<Block> validBlocks;
     public List<Block> Blocks;
+    public Block savedBlock;
 
     private void Awake()
     {
@@ -28,6 +29,21 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SaveBlock()
+    {
+        if(savedBlock == null)
+        {
+            savedBlock = Blocks[0];
+        }
+        else
+        {
+            Block temp;
+            temp = savedBlock;
+            savedBlock = Blocks[0];
+            Blocks[0] = temp;
+        }
     }
 
     public void GetRandomBlock()
