@@ -40,13 +40,16 @@ public class GameManager : MonoBehaviour
         Blocks.Add(rndBlock);  // Debug only
     }
 
-    public void RemoveBlock()
+    public Block GetNewBlock()
     {
+        Block temp = Blocks[0];
         Blocks.RemoveAt(0);
         GetRandomBlock();
         foreach (ShowBlock showblock in ShownBlocks)
         {
             showblock.Show();
         }
+
+        return temp;
     }
 }

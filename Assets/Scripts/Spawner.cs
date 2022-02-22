@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        
+        GameManager.instance.GetNewBlock();
     }
 
     void Update()

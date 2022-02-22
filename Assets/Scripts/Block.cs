@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    public Sprite image;
+
     float previousTime;
     float fallTime = 1f;
     
