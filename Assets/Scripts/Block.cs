@@ -56,8 +56,8 @@ public class Block : MonoBehaviour
     {
         foreach (Transform transformChild in transform)
         {
-            int xpos = Mathf.RoundToInt(transform.position.x);
-            int ypos = Mathf.RoundToInt(transform.position.y);
+            int xpos = Mathf.RoundToInt(transformChild.transform.position.x);
+            int ypos = Mathf.RoundToInt(transformChild.transform.position.x);
 
             if (xpos < 0 || ypos < 0 || xpos >= width || ypos >= height)
             {
