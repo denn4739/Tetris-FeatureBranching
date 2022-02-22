@@ -26,7 +26,6 @@ public class ShowBlock : MonoBehaviour
         {
             nextBlock = GameManager.instance.Blocks[index];
         }
-        block_img.sprite = nextBlock.gameObject.GetComponent<SpriteRenderer>().sprite;
-        block_img.color = nextBlock.gameObject.GetComponent<SpriteRenderer>().color;
+        block_img.sprite = nextBlock.image;
     }
 }

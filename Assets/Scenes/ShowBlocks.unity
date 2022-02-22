@@ -504,7 +504,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1216646502}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RemoveBlock
+        m_MethodName: TestMethod
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -676,11 +676,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   validBlocks:
-  - {fileID: 5359821961134403161, guid: f032e51a56a024f4c9a858df7829ff18, type: 3}
-  - {fileID: 3145919235381989696, guid: ae988fdd0de5de749b6859b3ae9fa636, type: 3}
-  - {fileID: -5155160059549646053, guid: fea8203153ba55d449aadc0e01e7ea23, type: 3}
-  - {fileID: 3145919235381989696, guid: fd8d40aef95fab24488f18d437749dfb, type: 3}
-  - {fileID: 1454368108672422165, guid: 4bf2ffab40983124e89f17368c9d9a1b, type: 3}
+  - {fileID: 6447285268716723390, guid: c7677692615241247af951abfecb2809, type: 3}
+  - {fileID: 3540905936172852337, guid: 39a87602f7714514f8fae4f4aff18339, type: 3}
+  - {fileID: 4270371202906833949, guid: dd28067e07340c942ba5c5d017db7f4d, type: 3}
+  - {fileID: 1859134266245160262, guid: 548c2147336f7794a961113fc40bb90b, type: 3}
+  - {fileID: -955628236201300362, guid: 55b8ef74ce736e546804b8290e886e26, type: 3}
+  - {fileID: -2484027320285551501, guid: cbc614d23dff03c4997ec02ef37a72de, type: 3}
   Blocks: []
   ShownBlocks:
   - {fileID: 140954375}

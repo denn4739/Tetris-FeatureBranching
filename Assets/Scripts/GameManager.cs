@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public Block GetNewBlock()
     {
+        Debug.Log("Help");
         Block temp = Blocks[0];
         Blocks.RemoveAt(0);
         GetRandomBlock();
@@ -51,5 +52,15 @@ public class GameManager : MonoBehaviour
         }
 
         return temp;
+    }
+
+    public void TestMethod()
+    {
+        Blocks.RemoveAt(0);
+        GetRandomBlock();
+        foreach (ShowBlock showblock in ShownBlocks)
+        {
+            showblock.Show();
+        }
     }
 }
