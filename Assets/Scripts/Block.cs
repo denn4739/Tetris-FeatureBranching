@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,6 +54,11 @@ public class Block : MonoBehaviour
             if (!ValidMove())
             {
                 transform.position -= new Vector3(0, -1, 0);
+                this.enabled = false;
+
+                //Spawn new block
+                Instantiate(GameManager.instance.GetNewBlock(), new Vector3(5f, 17, 0), Quaternion.identity);
+                
             }
             previousTime = Time.time;
         }

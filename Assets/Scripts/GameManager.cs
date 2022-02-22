@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
 
     public Block GetNewBlock()
     {
-        Debug.Log("Help");
         Block temp = Blocks[0];
         Blocks.RemoveAt(0);
         GetRandomBlock();
