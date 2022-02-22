@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Queue<Block> nextBlocks = new Queue<Block>();
     public List<Block> validBlocks;
     public List<Block> Blocks;
+    public List<ShowBlock> ShownBlocks;
 
     private void Awake()
     {
@@ -41,8 +42,11 @@ public class GameManager : MonoBehaviour
 
     public void RemoveBlock()
     {
-        Debug.Log("Hello");
         Blocks.RemoveAt(0);
         GetRandomBlock();
+        foreach (ShowBlock showblock in ShownBlocks)
+        {
+            showblock.Show();
+        }
     }
 }
