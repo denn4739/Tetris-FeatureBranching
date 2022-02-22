@@ -22,7 +22,7 @@ public class Block : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             transform.position += new Vector3(-1, 0);
-            if (!validMove())
+            if (!ValidMove())
             {
                 transform.position -= new Vector3(-1, 0);
             }
@@ -30,7 +30,7 @@ public class Block : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.D))
         {
             transform.position += new Vector3(1, 0);
-            if (!validMove())
+            if (!ValidMove())
             {
                 transform.position -= new Vector3(1, 0);
             }
@@ -38,26 +38,30 @@ public class Block : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.W) && gameObject.name != "Yellow")
         {
             transform.eulerAngles += new Vector3(0, 0, 90);
+            if (!ValidMove())
+            {
+                transform.eulerAngles += new Vector3(0, 0, -90);
+            }
         }
 
         //Move
         if (Time.time - previousTime > (Input.GetKeyDown(KeyCode.S) ? fallTime/10: fallTime))
         {
             transform.position += new Vector3(0, -1, 0);
-            if (!validMove())
+            if (!ValidMove())
             {
-                transform.position -= new Vector3(-1, 0, 0);
+                transform.position -= new Vector3(0, -1, 0);
             }
             previousTime = Time.time;
         }
     }
 
-    bool validMove()
+    bool ValidMove()
     {
         foreach (Transform transformChild in transform)
         {
             int xpos = Mathf.RoundToInt(transformChild.transform.position.x);
-            int ypos = Mathf.RoundToInt(transformChild.transform.position.x);
+            int ypos = Mathf.RoundToInt(transformChild.transform.position.y);
 
             if (xpos < 0 || ypos < 0 || xpos >= width || ypos >= height)
             {
